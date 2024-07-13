@@ -72,8 +72,6 @@ public class CamScannerLogic {
                 for (int coord: corner)
                     cornersString += coord + " ";
 
-        // STRINGBUILDER PLEEEEAAAAASE
-
         return getWarpedImage(path, cornersString);
     }
 }

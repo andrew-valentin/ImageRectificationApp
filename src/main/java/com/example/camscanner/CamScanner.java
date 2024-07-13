@@ -273,7 +273,8 @@ public class CamScanner extends Application {
     }
     public void warpEvent() {
         label.setText("New image.");
-        //imageView.setImage(this.newImage);
+        imageView.setImage(null);
+
 
         VBox downloadPage = new VBox(10, logo, imageView, label, downloadButton);
         downloadPage.setPrefSize(screenWidth, screenHeight-70);
@@ -300,7 +301,7 @@ public class CamScanner extends Application {
         // Save the BufferedImage to a file
         try {
             File outputFile = new File(logic.getNewImagePath(this.path));
-            assert newImage != null;
+            assert this.newImage != null;
             ImageIO.write((RenderedImage) newImage, "png", outputFile);
             System.out.println("New image saved.");
         } catch (IOException ioe) {
