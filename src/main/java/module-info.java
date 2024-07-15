@@ -4,6 +4,6 @@ module com.example.camscanner {
     requires java.desktop;
 
 
-    opens com.example.camscanner to javafx.fxml;
-    exports com.example.camscanner;
+    opens com.example.rectification to javafx.fxml;
+    exports com.example.rectification;
 }

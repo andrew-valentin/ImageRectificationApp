@@ -1,16 +1,11 @@
-package com.example.camscanner;
+package com.example.rectification;
 
-import javafx.scene.image.Image;
-
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CamScannerLogic {
+public class RectificationLogic {
     private BufferedImage getWarpedImage(String path, String corners) {
         try{
             // Specify the command to run your Python script

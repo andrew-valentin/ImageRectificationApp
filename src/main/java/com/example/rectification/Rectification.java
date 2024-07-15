@@ -1,4 +1,4 @@
-package com.example.camscanner;
+package com.example.rectification;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -29,7 +29,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.*;
 
-public class CamScanner extends Application {
+public class Rectification extends Application {
     private Stage stage;
 
     private double screenWidth;
@@ -55,7 +55,7 @@ public class CamScanner extends Application {
     private BufferedImage newImage;
 
     // Constructor
-    public CamScanner() {
+    public Rectification() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         screenWidth = screenSize.getWidth();
         screenHeight = screenSize.getHeight();
@@ -64,7 +64,7 @@ public class CamScanner extends Application {
         Rectangle csRect = new Rectangle();
         csRect.setX((screenWidth/2)-200);
         csRect.setY(50.0);
-        csRect.setWidth(400.0);
+        csRect.setWidth(675.0);
         csRect.setHeight(200.0);
         csRect.setArcWidth(50.0);
         csRect.setArcHeight(50.0);
@@ -78,7 +78,7 @@ public class CamScanner extends Application {
                 FontWeight.LIGHT,
                 FontPosture.ITALIC,
                 50));
-        csText.setText("CamScanner");
+        csText.setText("Image Rectification App");
         csText.setFill(Color.GHOSTWHITE);
         csText.setStrokeWidth(1.5);
         csText.setStroke(Color.BLACK);
@@ -266,7 +266,7 @@ public class CamScanner extends Application {
         stage.setScene(loadScene);
         stage.show();
 
-        CamScannerLogic logic = new CamScannerLogic();
+        RectificationLogic logic = new RectificationLogic();
         this.newImage = logic.getNewImage(this.path, corners);
 
         warpEvent();
@@ -296,7 +296,7 @@ public class CamScanner extends Application {
     }
 
     public void downloadEvent(ActionEvent e) {
-        CamScannerLogic logic = new CamScannerLogic();
+        RectificationLogic logic = new RectificationLogic();
 
         // Save the BufferedImage to a file
         try {

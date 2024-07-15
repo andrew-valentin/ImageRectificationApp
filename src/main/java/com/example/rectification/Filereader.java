@@ -1,12 +1,10 @@
-package com.example.camscanner;
+package com.example.rectification;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
 import java.lang.Integer;
-import java.util.Arrays;
-import java.util.ArrayList;
 
 public class Filereader{
     public static void main(String[] args){
